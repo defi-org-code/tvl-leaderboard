@@ -2,7 +2,7 @@ const BLOXY_API_KEY = 'ACCsay814xxhw';
 
 // ethereum only
 export async function bloxyHolders(token) {
-  const response = await fetch(`https://api.bloxy.info/token/token_holders_list?token=${token}&limit=500&key=${BLOXY_API_KEY}&format=structure`);
+  const response = await fetch(`https://api.bloxy.info/token/token_holders_list?token=${token}&limit=100&key=${BLOXY_API_KEY}&format=structure`);
   const json = await response.json();
   const res = [];
   for (let i = 0; i < json.length; i++) {
